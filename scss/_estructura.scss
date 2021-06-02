@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* tamaño body total */
+body {
+    width: 100%;
+}
+
+/* id para centrar */
+.centrarPagina {
+    text-align: center; 
+}
+
+/* subtitulos seccion receta centrados */ 
+.color_subtitulosrecetas {
+    text-align: center;
+}
+/* estructura del header */
+header {
+    margin-bottom: 10%;
+}
+
+div .fondoFoto {
+    background: url(../imagenespilares/fotoheader-min.jpg);
+    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+div .tituloPrincipal h1 {
+    padding-top: 20%;
+}
+
+/* header secciones postres */
+.fondoPostre {
+    background: url(../imagenespilares/rogel.jpg);
+    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/*header seccion para el te */ 
+.fondoParate {
+    background: url(../imagenespilares/headerparaelte-min.JPG);
+    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/*header seccion de salados */ 
+.fondoSalados {
+    background: url(../imagenespilares/salados.jpg);
+    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* header seccion regalos */ 
+.fondoRegalos {
+    background: url(../imagenespilares/headerregalo-min.jpg);
+    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+div .tituloPrincipalregalos h1 {
+    padding-top: 18%;
+}
+
+/*header seccion encargues*/ 
+.fondoRecetas {
+    background: url(../imagenespilares/fondorecetas-min.jpg);
+    width: 100%;
+    background-size: cover;
+    min-height: 60vh;
+}
+
+div .tituloPrincipalrecetas h1 {
+    padding-top: 5%;
+}
+
+/*header preguntas frecuentes */ 
+.fondoPreguntas {
+    background: url(../imagenespilares/fondopreguntas-min.jpg);
+    width: 100%;
+    background-size: cover;
+    min-height: 60vh;
+}
+
+div .tituloPrincipalpreguntas h1 {
+    padding-top: 7%;
+}
+
+/*header quienes somos*/ 
+.fondoQuienes {
+    background: url(../imagenespilares/fondoquienessomos-min.jpg);
+    width: 100%;
+    background-size: cover;
+    min-height: 60vh;
+}
+/*parrafos centrados */ 
+p {
+    text-align: center;
+}
+
+/* subtitulos centrados */
+.color_subtitulos {
+    text-align: center;
+}
+/* estructura del carousel */
+.carousel-inner {
+    width: 100%;
+    height: 100vh; }
+  
+.carousel {
+    width: 100%;
+    height: 100vh; }
+
+    
+/* contenedor de columnas banner y fotos */
+.contenedorColumnas {
+    width: 100%;
+    margin:auto;
+    text-align: center;
+}
+
+/* columnas del banner */
+.bannerinf_columnas {
+    width: 33.333%;
+    float: left;
+}
+
+/*columnas de las fotos de comidas */ 
+.columnas_fotos {
+    width: 25%;
+    float: left;
+    margin-top: 15px;
+   
+}
+
+/* tamaños foto/video del aside */ 
+aside a img {
+    width: 60%;
+}
+aside a video {
+    width: 50%;
+}
+
+/* fotos me queden en linea */
+aside {
+    display: inline-block;
+}
+
+/*tamaño fotos recetas */ 
+.recetasFlex img {
+    width: 25%;
+}
+
+/*tamaño fotos titi */ 
+.quienesFlex img {
+    width: 50%;
+}
+/* estilo del footer */
+.marginFooter {
+    margin: 30px;
+    text-align: center;
+}
+
+/* estilos flexbox */ 
+
+.padreFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content:space-around;
+    width: 100%;
+
+}
+
+.hijosFlex {
+    width: 25%;
+    margin-top: 30px;
+    flex-grow: 0;
+    overflow: hidden;
+    text-align: center;
+        img:hover {
+            transform: scale(2,2);
+        }
+}
+
+.padreFlex .hijosFlex img {
+    width: 70%;
+}
+.padreFlex .recetasFlex p {
+    text-align: left;
+}
+
+.recetasFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+.recetasFlex p {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.quienesFlex {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-grow: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.padreFlex h3 {
+    padding-top: 30px;
+}
+
+.preguntasFlex {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-grow: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.preguntasFlex p {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+/* tamaño de las fotos seccion quienes somos */
+.fotosQuienes {
+    text-align: center;
+}
+.fotosQuienes img {
+    width: 20%;
+
+}
+
+
+

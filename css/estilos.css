@@ -1,0 +1,597 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+/* tamaño body total */
+body {
+  width: 100%; }
+
+/* id para centrar */
+.centrarPagina {
+  text-align: center; }
+
+/* subtitulos seccion receta centrados */
+.color_subtitulosrecetas {
+  text-align: center; }
+
+/* estructura del header */
+header {
+  margin-bottom: 10%; }
+
+div .fondoFoto {
+  background: url(../imagenespilares/fotoheader-min.jpg);
+  width: 100%;
+  background-size: cover;
+  min-height: 100vh; }
+
+div .tituloPrincipal h1 {
+  padding-top: 20%; }
+
+/* header secciones postres */
+.fondoPostre {
+  background: url(../imagenespilares/rogel.jpg);
+  width: 100%;
+  background-size: cover;
+  min-height: 100vh; }
+
+/*header seccion para el te */
+.fondoParate {
+  background: url(../imagenespilares/headerparaelte-min.JPG);
+  width: 100%;
+  background-size: cover;
+  min-height: 100vh; }
+
+/*header seccion de salados */
+.fondoSalados {
+  background: url(../imagenespilares/salados.jpg);
+  width: 100%;
+  background-size: cover;
+  min-height: 100vh; }
+
+/* header seccion regalos */
+.fondoRegalos {
+  background: url(../imagenespilares/headerregalo-min.jpg);
+  width: 100%;
+  background-size: cover;
+  min-height: 100vh; }
+
+div .tituloPrincipalregalos h1 {
+  padding-top: 18%; }
+
+/*header seccion encargues*/
+.fondoRecetas {
+  background: url(../imagenespilares/fondorecetas-min.jpg);
+  width: 100%;
+  background-size: cover;
+  min-height: 60vh; }
+
+div .tituloPrincipalrecetas h1 {
+  padding-top: 5%; }
+
+/*header preguntas frecuentes */
+.fondoPreguntas {
+  background: url(../imagenespilares/fondopreguntas-min.jpg);
+  width: 100%;
+  background-size: cover;
+  min-height: 60vh; }
+
+div .tituloPrincipalpreguntas h1 {
+  padding-top: 7%; }
+
+/*header quienes somos*/
+.fondoQuienes {
+  background: url(../imagenespilares/fondoquienessomos-min.jpg);
+  width: 100%;
+  background-size: cover;
+  min-height: 60vh; }
+
+/*parrafos centrados */
+p {
+  text-align: center; }
+
+/* subtitulos centrados */
+.color_subtitulos {
+  text-align: center; }
+
+/* estructura del carousel */
+.carousel-inner {
+  width: 100%;
+  height: 100vh; }
+
+.carousel {
+  width: 100%;
+  height: 100vh; }
+
+/* contenedor de columnas banner y fotos */
+.contenedorColumnas {
+  width: 100%;
+  margin: auto;
+  text-align: center; }
+
+/* columnas del banner */
+.bannerinf_columnas {
+  width: 33.333%;
+  float: left; }
+
+/*columnas de las fotos de comidas */
+.columnas_fotos {
+  width: 25%;
+  float: left;
+  margin-top: 15px; }
+
+/* tamaños foto/video del aside */
+aside a img {
+  width: 60%; }
+
+aside a video {
+  width: 50%; }
+
+/* fotos me queden en linea */
+aside {
+  display: inline-block; }
+
+/*tamaño fotos recetas */
+.recetasFlex img {
+  width: 25%; }
+
+/*tamaño fotos titi */
+.quienesFlex img {
+  width: 50%; }
+
+/* estilo del footer */
+.marginFooter {
+  margin: 30px;
+  text-align: center; }
+
+/* estilos flexbox */
+.padreFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 100%; }
+
+.hijosFlex {
+  width: 25%;
+  margin-top: 30px;
+  flex-grow: 0;
+  overflow: hidden;
+  text-align: center; }
+  .hijosFlex img:hover {
+    transform: scale(2, 2); }
+
+.padreFlex .hijosFlex img {
+  width: 70%; }
+
+.padreFlex .recetasFlex p {
+  text-align: left; }
+
+.recetasFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px; }
+
+.recetasFlex p {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.quienesFlex {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  flex-grow: 0;
+  overflow: hidden;
+  text-align: center; }
+
+.padreFlex h3 {
+  padding-top: 30px; }
+
+.preguntasFlex {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  flex-grow: 0;
+  overflow: hidden;
+  text-align: center; }
+
+.preguntasFlex p {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+/* tamaño de las fotos seccion quienes somos */
+.fotosQuienes {
+  text-align: center; }
+
+.fotosQuienes img {
+  width: 20%; }
+
+/*grilla contenedora general*/
+.contenedor {
+  width: 100%;
+  text-align: center;
+  border: none;
+  font-size: 15px;
+  margin: auto;
+  font-size: 20px; }
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, auto);
+  grid-gap: 15px; }
+
+/*celdas del header*/
+.contenedor .header {
+  grid-column: 1/5;
+  grid-row: 1/2; }
+
+/*celdas del carousel*/
+.contenedor .foto {
+  grid-column: 2/4;
+  grid-row: 2/3; }
+
+/*celdas info celiaquia*/
+.contenedor .info {
+  grid-column: 1/3;
+  grid-row: 3/4; }
+
+/* celdas de la segunda parte de info celiaca */
+.contenedor .premezcla {
+  grid-column: 3/5;
+  grid-row: 3/4; }
+
+/*celdas de info venta cortita */
+.contenedor .banner {
+  grid-column: 1/5;
+  grid-row: 4/5; }
+
+/* celdas de las fotos con comidas */
+.contenedor .comida {
+  grid-column: 1/5;
+  grid-row: 6/7;
+  display: inline-block; }
+
+/* celdas del formulario */
+.contenedor .form {
+  grid-column: 1/5;
+  grid-row: 7/8; }
+
+/* celdas del pie de pagina */
+.contenedor .footer {
+  grid-column: 2/4;
+  grid-row: 8/9; }
+
+/* fuente*/
+.fuente_body {
+  font-family: Raleway; }
+
+/* header titulo */
+.header_titulo {
+  font-family: Lora;
+  font-size: 400%; }
+
+/* tamaño letra navbar */
+.nav-link {
+  font-size: 70%; }
+
+/* subtitulo del header */
+.header_subtitulo {
+  font-size: 100%;
+  font-weight: bold; }
+
+/*tamaño letra banner inf */
+.bannerinf_columnas {
+  font-size: 150; }
+
+/* tamaño letra recetas */
+.padreFlex .recetasFlex p {
+  font-size: 150%; }
+
+/*colordeltitulo*/
+.header_titulo {
+  color: black; }
+
+/*color de los subtitulos*/
+.color_subtitulos {
+  color: #cb997e;
+  background-color: #f0efeb; }
+
+/*color de los subtitulos de la seccion recetas*/
+.color_subtitulosrecetas {
+  color: #cb997e; }
+
+/*fondonavbar*/
+.navbar-color {
+  background-color: #f0efeb;
+  width: 100%; }
+
+/*color letra de los parrafos */
+.parrafo_color {
+  color: #565656; }
+
+/*colores del banner informativo */
+.bannerinf_columnas {
+  background-color: #ffd7ba;
+  color: #565656; }
+
+/* color de fondo de aside */
+aside {
+  background-color: #f0efeb; }
+
+/* estilo color pie de pagina */
+.footer ul {
+  list-style: none; }
+  .footer ul li {
+    color: #cb997e; }
+
+/* background color del flexbox */
+.padreFlex {
+  background-color: #f8edeb; }
+
+/* media query tablet */
+@media only screen and (max-width: 768px) {
+  .contenedor {
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-size: 15px;
+    margin: auto; }
+  .contenedor div {
+    display: block; }
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 15px; }
+  .header_titulo {
+    color: black; }
+  h1 {
+    width: 100%;
+    font-weight: 500 bold;
+    text-align: center;
+    letter-spacing: 5px; }
+  .contenedor .header {
+    grid-column: 1/3;
+    grid-row: 1/2; }
+  ​
+header a img {
+    width: 10%; }
+  .contenedor .foto {
+    grid-column: 1/3;
+    grid-row: 2/3; }
+  .contenedor .info {
+    grid-column: 1/2;
+    grid-row: 3/4; }
+  .contenedor .premezcla {
+    grid-column: 2/3;
+    grid-row: 3/4; }
+  .color_subtitulos {
+    color: #cb997e; }
+  p {
+    color: black; }
+  .contenedor .banner {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    display: block; }
+  .contenedorColumnas {
+    width: 100%;
+    margin: auto;
+    text-align: center; }
+  .bannerinf_columnas {
+    width: 100%;
+    float: left;
+    background-color: #ddbea9;
+    font-size: 15px;
+    color: #565656; }
+  .contenedor .comida {
+    grid-column: 1/3;
+    grid-row: 6/7;
+    display: block; }
+  .columnas_fotos {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    text-decoration: none; }
+  aside {
+    background-color: #fff1e6;
+    display: inline-block; }
+  aside a img {
+    width: 50%; }
+  aside a video {
+    width: 30%; }
+  .contenedor .form {
+    grid-column: 1/3;
+    grid-row: 7/8; }
+  .contenedor .footer {
+    grid-column: 1/3;
+    grid-row: 8/9;
+    text-align: center; }
+  footer ul li {
+    color: #cb997e;
+    list-style: none; }
+  .subtitulos_confondos {
+    color: #cb997e;
+    background-color: #ede0d4;
+    text-align: center; }
+  .marginFooter {
+    margin: 30px;
+    text-align: center; }
+  .padreFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 100%; }
+  .hijosFlex {
+    width: 50%;
+    margin-top: 30px;
+    flex-grow: 0;
+    overflow: hidden;
+    text-align: center;
+    flex-wrap: wrap; }
+    .hijosFlex img:hover {
+      transform: scale(2, 2); }
+  .padreFlex .recetasFlex p {
+    text-align: left; }
+  .recetasFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px; }
+  .recetasFlex p {
+    padding-left: 30px;
+    padding-right: 30px; }
+  .quienesFlex {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-grow: 0;
+    overflow: hidden;
+    text-align: center; }
+  .padreFlex h3 {
+    padding-top: 30px; }
+  /* tamaño de las fotos seccion quienes somos */
+  .fotosQuienes {
+    text-align: center; }
+  .fotosQuienes img {
+    width: 80%; } }
+
+/* estilos media query celular */
+@media only screen and (max-width: 380px) {
+  .contenedor {
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-size: 15px;
+    margin: auto; }
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(10, auto);
+    grid-gap: 15px; }
+  .header_titulo {
+    font-family: Lora;
+    font-size: 200%;
+    color: #f0efeb; }
+  .contenedor .header {
+    grid-column: 1/2;
+    grid-row: 1/2; }
+  ​
+header a img {
+    width: 5%; }
+  .contenedor .foto {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-content: center; }
+  .contenedor .info {
+    grid-column: 1/2;
+    grid-row: 3/4; }
+  .contenedor .premezcla {
+    grid-column: 1/2;
+    grid-row: 4/5; }
+  .color_subtitulos {
+    color: #cb997e; }
+  p {
+    color: black; }
+  .contenedor .banner {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    display: block; }
+  .contenedorColumnas {
+    width: 100%;
+    margin: auto;
+    text-align: center; }
+  .bannerinf_columnas {
+    width: 100%;
+    float: left;
+    background-color: #ddbea9;
+    font-size: 15px;
+    color: #565656; }
+  .contenedor .tabla {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    display: none; }
+  tr td li {
+    list-style: none; }
+  .contenedor .comida {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    display: block; }
+  .columnas_fotos {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    text-decoration: none; }
+  aside {
+    background-color: #ddbea9;
+    display: block; }
+  .contenedor .form {
+    grid-column: 1/2;
+    grid-row: 8/9; }
+  .contenedor .footer {
+    grid-column: 1/2;
+    grid-row: 9/10;
+    text-align: center; }
+  footer ul li {
+    color: #cb997e;
+    list-style: none; }
+  .subtitulos_confondos {
+    color: #cb997e;
+    background-color: #ede0d4;
+    text-align: center; }
+  .marginFooter {
+    margin: 30px;
+    text-align: center; }
+  .padreFlex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 100%; }
+  .hijosFlex {
+    width: 100%;
+    margin-top: 30px;
+    flex-grow: 0;
+    overflow: hidden;
+    text-align: center;
+    flex-wrap: wrap; }
+    .hijosFlex img:hover {
+      transform: scale(2, 2); }
+  .padreFlex .recetasFlex p {
+    text-align: left; }
+  .recetasFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px; }
+  .recetasFlex p {
+    padding-left: 30px;
+    padding-right: 30px; }
+  .quienesFlex {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-grow: 0;
+    overflow: hidden;
+    text-align: center; }
+  .padreFlex h3 {
+    padding-top: 30px; }
+  /* tamaño de las fotos seccion quienes somos */
+  .fotosQuienes {
+    text-align: center; }
+  .fotosQuienes img {
+    width: 70%; } }

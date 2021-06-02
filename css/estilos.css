@@ -211,6 +211,33 @@ aside {
 .fotosQuienes img {
   width: 20%; }
 
+/*estructura de las recetas en mi seccion principal */
+.recetas {
+  width: 100%;
+  max-width: 1200px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto; }
+  .recetas .card {
+    width: 330px;
+    height: 390px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba 0, 0, 0, 0.2;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    display: inline-block; }
+  .recetas .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba 0, 0, 0, 0.2; }
+  .recetas .card img {
+    width: 60%; }
+  .recetas .card p {
+    padding: 0 1rem; }
+
 /*grilla contenedora general*/
 .contenedor {
   width: 100%;
@@ -223,7 +250,7 @@ aside {
 .contenedor {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, auto);
+  grid-template-rows: repeat(10, auto);
   grid-gap: 15px; }
 
 /*celdas del header*/
@@ -257,15 +284,20 @@ aside {
   grid-row: 6/7;
   display: inline-block; }
 
+/*celdas de las recetas */
+.contenedor .recetas {
+  grid-column: 1/5;
+  grid-row: 7/8; }
+
 /* celdas del formulario */
 .contenedor .form {
   grid-column: 1/5;
-  grid-row: 7/8; }
+  grid-row: 8/9; }
 
 /* celdas del pie de pagina */
 .contenedor .footer {
   grid-column: 2/4;
-  grid-row: 8/9; }
+  grid-row: 9/10; }
 
 /* fuente*/
 .fuente_body {
@@ -292,6 +324,14 @@ aside {
 /* tamaño letra recetas */
 .padreFlex .recetasFlex p {
   font-size: 150%; }
+
+/* tipografia seccion recetas pagina principal */
+.card h4 {
+  font-weight: 600; }
+
+.card p {
+  font-size: 15px;
+  font-style: bold; }
 
 /*colordeltitulo*/
 .header_titulo {
@@ -333,6 +373,10 @@ aside {
 /* background color del flexbox */
 .padreFlex {
   background-color: #f8edeb; }
+
+/*color parrafo recetas pag principal */
+.card p {
+  color: black; }
 
 /* media query tablet */
 @media only screen and (max-width: 768px) {

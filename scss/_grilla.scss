@@ -11,7 +11,7 @@
 .contenedor {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: repeat(10, auto);
     grid-gap: 15px;
 }
 
@@ -51,14 +51,19 @@
     display: inline-block;
 }
 
+/*celdas de las recetas */ 
+.contenedor .recetas {
+    grid-column: 1/5;
+    grid-row: 7/8;
+}
 /* celdas del formulario */
 .contenedor .form {
     grid-column: 1/5;
-    grid-row: 7/8;
+    grid-row: 8/9;
 }
 
 /* celdas del pie de pagina */
 .contenedor .footer {
     grid-column: 2/4;
-    grid-row: 8/9;
+    grid-row: 9/10;
 }

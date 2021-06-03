@@ -16,7 +16,7 @@
     .contenedor {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, auto);
+        grid-template-rows: repeat(10, auto);
         grid-gap: 15px;
     }
 
@@ -108,16 +108,40 @@
     aside a video {
         width: 30%;
     }
-    .contenedor .form {
+    
+    .contenedor .recetas {
         grid-column: 1/3;
         grid-row: 7/8;
+        display: block;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin:auto;
+        
+            .card {
+                width: 50%;
+                border-radius: 8px;
+                box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2);
+                overflow: hidden;
+                margin: 20px;
+                text-align: center;
+                transition: all 0.25s;
+                display: inline-block;
+            }
+        
     }
+
+
     
-    
+    .contenedor .form {
+        grid-column: 1/3;
+        grid-row: 8/9;
+    }
     
     .contenedor .footer {
         grid-column: 1/3;
-        grid-row: 8/9;
+        grid-row: 9/10;
         text-align: center;
     }
     
@@ -278,19 +302,9 @@
         color:  #565656;
     }
     
-    .contenedor .tabla {
-        grid-column: 1/2;
-        grid-row: 6/7;
-        display: none;
-    }
-    
-    tr td li {
-        list-style: none;
-    }
-    
     .contenedor .comida {
         grid-column: 1/2;
-        grid-row: 7/8;
+        grid-row: 6/7;
         display: block;
     }
        
@@ -305,13 +319,14 @@
         background-color: #ddbea9;
         display: block;
     }
-    
+    .contenedor .recetas {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
     .contenedor .form {
         grid-column: 1/2;
         grid-row: 8/9;
     }
-    
-    
     
     .contenedor .footer {
         grid-column: 1/2;
@@ -401,4 +416,12 @@
     }
     
     
+}
+/*boton de whatsapp */ 
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
 }

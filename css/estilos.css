@@ -222,7 +222,7 @@ aside {
   margin: auto; }
   .recetas .card {
     width: 330px;
-    height: 390px;
+    height: 400px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba 0, 0, 0, 0.2;
     overflow: hidden;
@@ -237,6 +237,25 @@ aside {
     width: 60%; }
   .recetas .card p {
     padding: 0 1rem; }
+
+.btn-wsp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  line-height: 63px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: all 300ms ease; }
+
+.btn-wsp:hover {
+  background: #20ba5a; }
 
 /*grilla contenedora general*/
 .contenedor {
@@ -391,7 +410,7 @@ aside {
   .contenedor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: repeat(10, auto);
     grid-gap: 15px; }
   .header_titulo {
     color: black; }
@@ -449,12 +468,30 @@ header a img {
     width: 50%; }
   aside a video {
     width: 30%; }
+  .contenedor .recetas {
+    grid-column: 1/3;
+    grid-row: 7/8;
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto; }
+    .contenedor .recetas .card {
+      width: 50%;
+      border-radius: 8px;
+      box-shadow: 0 2px 2px rgba 0, 0, 0, 0.2;
+      overflow: hidden;
+      margin: 20px;
+      text-align: center;
+      transition: all 0.25s;
+      display: inline-block; }
   .contenedor .form {
     grid-column: 1/3;
-    grid-row: 7/8; }
+    grid-row: 8/9; }
   .contenedor .footer {
     grid-column: 1/3;
-    grid-row: 8/9;
+    grid-row: 9/10;
     text-align: center; }
   footer ul li {
     color: #cb997e;
@@ -561,15 +598,9 @@ header a img {
     background-color: #ddbea9;
     font-size: 15px;
     color: #565656; }
-  .contenedor .tabla {
-    grid-column: 1/2;
-    grid-row: 6/7;
-    display: none; }
-  tr td li {
-    list-style: none; }
   .contenedor .comida {
     grid-column: 1/2;
-    grid-row: 7/8;
+    grid-row: 6/7;
     display: block; }
   .columnas_fotos {
     width: 100%;
@@ -579,6 +610,9 @@ header a img {
   aside {
     background-color: #ddbea9;
     display: block; }
+  .contenedor .recetas {
+    grid-column: 1/2;
+    grid-row: 7/8; }
   .contenedor .form {
     grid-column: 1/2;
     grid-row: 8/9; }
@@ -639,3 +673,10 @@ header a img {
     text-align: center; }
   .fotosQuienes img {
     width: 70%; } }
+
+/*boton de whatsapp */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .btn-wsp {
+    width: 63px;
+    height: 63px;
+    line-height: 66px; } }

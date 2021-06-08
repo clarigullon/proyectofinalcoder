@@ -13,7 +13,8 @@
 
 /*color de los subtitulos de la seccion recetas*/ 
 .color_subtitulosrecetas {
-    color:#cb997e;
+    color: black;
+    
 }
 
 /*fondonavbar*/
@@ -31,6 +32,7 @@
 .bannerinf_columnas {
     background-color: #ffd7ba;
     color:  #565656;
+    min-height: 20vh;
 }
 
 /* color de fondo de aside */
@@ -41,15 +43,31 @@ aside {
 
 /* estilo color pie de pagina */
 .footer {
-        ul {
-            list-style: none;
-            li {
-                color: #cb997e;
+    background:#f0efeb;
+    padding: 30px;
+        .social-icons { 
+            ul {
+                list-style: none;
+                li {
+                    i .fas {
+                        color: black;
+                        text-decoration: none;
+                    }
+                
+                }
+            }
+            .tituloFooter {
+                color: black;
+                
             }
         }
+        
 }
 
-
+i {
+    color: black;
+    text-decoration: none;
+}
 
 /* background color del flexbox */ 
 .padreFlex {
@@ -64,4 +82,15 @@ aside {
 /*background color del navbardrop */ 
 .dropdown-menu {
     background-color:#f0efeb; ;
+}
+
+/* color formulario */ 
+form {
+    background-color: #fff1e6;
+}
+/* color del subtitulo del formulario */ 
+.color_subtitulosform {
+    color: black;
+    background-color: #fff1e6;
+    text-align: center;
 }

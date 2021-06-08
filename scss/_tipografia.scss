@@ -10,6 +10,11 @@
     
 }
 
+.subtituloHeader {
+    font-family: Courgette;
+    font-size: 250%;
+}
+
 /* tamaño letra navbar */
 .nav-link {
     font-size: 70%;
@@ -32,7 +37,22 @@
 .padreFlex .recetasFlex p {
     font-size: 150%;
 }
-
+/* estilo tipografia footer */ 
+.footer {
+    ul .social-icons {
+        li {
+            i {
+                margin-bottom: 20px;
+                text-decoration: none;
+                font-family:Kanit;
+                font-weight: bolder;
+                align-items: center;
+                font-size: 25px;
+            }
+        }
+            
+    }
+}
 /* tipografia seccion recetas pagina principal */
 .card h4 {
     font-weight: 600;
@@ -42,4 +62,3 @@
     font-size: 15px;
     font-style: bold;
 }
-

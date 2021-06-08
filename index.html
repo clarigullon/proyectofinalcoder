@@ -21,7 +21,7 @@
         <a href="https://api.whatsapp.com/send?phone=+5492494380956" class="btn-wsp" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <main class="contenedor">
+        <div class="contenedorTotal">
             <div class="header">
                 <!--comienzo del header con titulos y menu-->
                 <header class="centrarPagina">
@@ -72,9 +72,10 @@
                     
                 </header>
             </div>
+        </div>
             <!--fin del header con titulos y menu-->
             
-            
+        <main class="contenedor">    
                 <div class="info">
                 <!--informacion corta celiaquia-->
                     <section>
@@ -84,22 +85,6 @@
                     <br><br>
                 </div>
                 <!--fin informacion corta celiaquia-->
-        
-                <!--banner info de compra-->
-                <div class="banner">
-                    <section class="contenedorColumnas">
-                        <div class="bannerinf_columnas">
-                            <h2>ENVIOS GRATIS A TANDIL</h2>
-                        </div>
-                        <div class="bannerinf_columnas">
-                            <h2>PAGO EN EFECTIVO</h2>
-                        </div>
-                        <div class="bannerinf_columnas">
-                            <h2>CONTACTATE YA!</h2>
-                        </div>
-                    </section>
-                </div>
-                <!--fin banner info de compra-->
                 
                 <!--con que cocinamos-->
                 <div class="premezcla">
@@ -135,6 +120,32 @@
                         </aside>
                 </div>
                     <!--fin de fotos principales--> 
+                
+                <!--banner info de compra-->
+                <div class="banner">
+                    <section class="contenedorColumnas">
+                        <div class="bannerinf_columnas">
+                            <h2 class="palabras-banner"><strong>ENVIOS GRATIS A TANDIL</strong></h2>
+                        </div>
+                        <div class="bannerinf_columnas">
+                            <h2 class="palabras-banner"> <strong>PAGO EN EFECTIVO</strong></h2>
+                        </div>
+                        <div class="bannerinf_columnas">
+                            <h2 class="palabras-banner"><strong>CONTACTATE YA!</strong></h2>
+                        </div>
+                    </section>
+                </div>
+                <!--fin banner info de compra-->
+                <!--info de encargues-->
+                <div class="encargues">
+                    <section>
+                        <h2 class="color_subtitulos">¿CÓMO NOS PODES ENCARGAR?</h2>
+                        <p>Podes hacer tu pedido con 48 hs de anterioridad. <br> ¿Por dónde? <br>
+                        Por Whatsapp haciendo click en nuestro botón que se encuentra abajo a la derecha. <br>
+                        Por mensaje directo de Instagram. <br>
+                        </p>
+                    </section>
+                </div>
                 <div class="recetas">
                     <section>
                         <h2 class="color_subtitulos">RECETAS</h2>
@@ -161,63 +172,78 @@
 
                 </div>
                    
-               
+               <br><br>
                 <div class="form">
                 <!--comienzo formulario de contacto-->
-                    <h3 class="color_subtitulos">FORMULARIO</h3>
+                    <h3 class="color_subtitulosform"><strong>Tu opinión nos importa..</strong></h3>
                     <form action="gracias_enviar.php" method="POST" enctype="application/x-www-form-urlencoded">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre"> <br><br>
-        
-                        <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido"> <br><br>
-        
-                    <div>¿Qué sos?</div>
-                    <select name="¿Que sos?">
-                        <option value="Celiaco">Celiaco</option>
-                        <option value="Intolerante al gluten">Intolerante al gluten</option>
-                        <option value="Conocido de alguien celiaco o intolerante">Conocido de alguien celiaco o intolerante</option>
-                        <option value="Simplemente un curioso">Simplemente un curioso</option>
-                    </select>
-                <br><br>
-        
-                    <div>Email</div>
-                        <input type="email"> <br>
-                
-                    <div>Sexo</div>
-                    <div>Hombre</div>
-                        <input type="radio" name="sexo" value="Hombre"> <br>
-                    <div>Mujer</div>
-                        <input type="radio" name="sexo" value="Mujer"> <br><br>
-                
-                    <div>Acepta términos y condiciones</div>
-                        <input type="checkbox" name="Aceptar" value="1">
-                    <br>
-        
-                    <textarea cols="20" rows="10">
-        
-        
-        
-                    </textarea>
-        
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Email</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">¿Qué sos?</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Celíaco</option>
+                            <option>Intolerante al Gluten</option>
+                            <option>Alguien cercano a un celíaco o intolerante</option>
+                            <option>Simplemente un curioso</option>
+                          </select>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">¿Cómo llegaste a la página?</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Por Instagram</option>
+                              <option>Por Facebook</option>
+                              <option>Por publicidad</option>
+                              <option>Por alguien conocido</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Deja tu opinión.. </label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
                     </form>
-                <!--fin formulario de contacto-->
+                    <!--fin formulario de contacto-->
+        
                 </div>
-                <!--pie de pagina con datos de contacto-->
-                <div class="footer">
-                    <footer>
-                        <h2 class="color_subtitulos">Contactanos</h2>
-                        <ul>
-                            <li>WhatsApp</li>
-                            <li>Facebook</li>
-                            <li>Correo Electrónico</li>
-                            <a href="https://www.instagram.com/tutti.glutenfree/?hl=es-la"><li>Instagram</li></a>
-                        </ul>
-                    </footer>
-                </div>
-            
         </main>
-                <!--fin de pie de pagina con datos de contacto-->
+        <!--pie de pagina con datos de contacto-->
+        <div class="footer">
+            <footer class="centrarPagina">
+                <h2 class="tituloFooter"><strong>NUESTRAS REDES SOCIALES</strong></h2>
+                    <h4 class="tituloFooter"><strong>TUTTIGLUTENFREE <br>
+                        APTO CELÍACOS <br>
+                        - TANDIL - </strong></h4>
+                        <br><br>
+                    <ul class="social-icons">
+                        <li>
+                        <a href="https://www.instagram.com/tutti.glutenfree/" target="_blank">
+                            <i class="fab fa-instagram"><br> Instagram</i>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://api.whatsapp.com/send?phone=+5492494465819" target="_blank">
+                            <i class="fab fa-whatsapp"> <br>WhatsApp</i>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="mailto:clariigullon@gmail.com">
+                            <i class="fas fa-envelope"><br>Correo <br>Electrónico</i>
+                        </a>
+                        </li>
+                    </ul>
+                    <p class="tituloFooter">-Comida casera y artesanal-</p>
+                </div>
+            </footer>
+        <!--fin de pie de pagina con datos de contacto-->
     <script src="https://kit.fontawesome.com/c8bfb8fcf1.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

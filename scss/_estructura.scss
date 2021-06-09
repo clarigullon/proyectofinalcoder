@@ -190,13 +190,12 @@ aside {
     width: 75%;
     justify-content: center;
     padding-left: 27%;
-    .btn {
-        align-content: flex-end;
-    }
-
 }
 
-
+.form-group .derecha {
+    display: flex;
+    justify-content: flex-end;
+  }
 /* estilos flexbox */ 
 
 .padreFlex {
@@ -291,6 +290,8 @@ aside {
     flex-wrap: wrap;
     justify-content: center;
     margin:auto;
+    margin-bottom: 7%;
+    
 
     .card {
         width: 330px;

@@ -14,7 +14,11 @@
 /*color de los subtitulos de la seccion recetas*/ 
 .color_subtitulosrecetas {
     color: black;
-    
+    margin-left: 5%;
+}
+.subtitulos_quienes {
+    color:#cb997e;
+    text-align: center;
 }
 
 /*fondonavbar*/
@@ -85,12 +89,12 @@ i {
 }
 
 /* color formulario */ 
-form {
+.form {
     background-color: #fff1e6;
 }
 /* color del subtitulo del formulario */ 
 .color_subtitulosform {
     color: black;
-    background-color: #fff1e6;
+    background-color:#fff1e6 ;
     text-align: center;
 }

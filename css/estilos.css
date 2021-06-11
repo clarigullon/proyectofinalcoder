@@ -20,7 +20,7 @@ header {
   margin-bottom: 2%; }
 
 div .fondoFoto {
-  background: url(../imagenespilares/fotoheader-min.jpg);
+  background: url(../imagenespilares/fondoH.jpg);
   width: 100%;
   background-size: cover;
   min-height: 100vh; }
@@ -35,38 +35,42 @@ div .tituloPrincipal h1 {
 
 /* header secciones postres */
 .fondoPostre {
-  background: url(../imagenespilares/rogel.jpg);
+  background: url(../imagenespilares/postres.jpg);
   width: 100%;
   background-size: cover;
-  min-height: 100vh; }
+  min-height: 100vh;
+  margin-bottom: 5%; }
 
 /*header seccion para el te */
 .fondoParate {
-  background: url(../imagenespilares/headerparaelte-min.JPG);
+  background: url(../imagenespilares/paraelte2.jpg);
   width: 100%;
   background-size: cover;
-  min-height: 100vh; }
+  min-height: 100vh;
+  margin-bottom: 5%; }
 
 /*header seccion de salados */
 .fondoSalados {
-  background: url(../imagenespilares/salados.jpg);
+  background: url(../imagenespilares/salados2.jpg);
   width: 100%;
   background-size: cover;
-  min-height: 100vh; }
+  min-height: 100vh;
+  margin-bottom: 5%; }
 
 /* header seccion regalos */
 .fondoRegalos {
-  background: url(../imagenespilares/headerregalo-min.jpg);
+  background: url(../imagenespilares/regalos2.jpg);
   width: 100%;
   background-size: cover;
-  min-height: 100vh; }
+  min-height: 100vh;
+  margin-bottom: 5%; }
 
 div .tituloPrincipalregalos h1 {
   padding-top: 18%; }
 
 /*header seccion recetas*/
 .fondoRecetas {
-  background: url(../imagenespilares/fondorecetas-min.jpg);
+  background: url(../imagenespilares/recetas.jpg);
   width: 100%;
   background-size: cover;
   min-height: 85vh; }
@@ -76,7 +80,7 @@ div .tituloPrincipalrecetas h1 {
 
 /*header preguntas frecuentes */
 .fondoPreguntas {
-  background: url(../imagenespilares/fondopreguntas-min.jpg);
+  background: url(../imagenespilares/preguntas.jpg);
   width: 100%;
   background-size: cover;
   min-height: 80vh; }
@@ -86,7 +90,7 @@ div .tituloPrincipalpreguntas h1 {
 
 /*header quienes somos*/
 .fondoQuienes {
-  background: url(../imagenespilares/fondoquienessomos-min.jpg);
+  background: url(../imagenespilares/quienes.jpg);
   width: 100%;
   background-size: cover;
   min-height: 80vh; }
@@ -469,7 +473,7 @@ i {
 
 /* media query tablet */
 @media only screen and (max-width: 768px) {
-  .contenedor {
+  .contenedorTotal {
     width: 100%;
     text-align: center;
     border: none;
@@ -645,8 +649,8 @@ header a img {
     grid-gap: 15px; }
   .header_titulo {
     font-family: Lora;
-    font-size: 200%;
-    color: #f0efeb; }
+    font-size: 270%;
+    color: black; }
   .contenedor .header {
     grid-column: 1/2;
     grid-row: 1/2; }
@@ -655,7 +659,8 @@ header a img {
     width: 5%; }
   .contenedor .info {
     grid-column: 1/2;
-    grid-row: 2/3; }
+    grid-row: 2/3;
+    z-index: 1000; }
   .contenedor .premezcla {
     grid-column: 1/2;
     grid-row: 3/4; }
@@ -705,9 +710,10 @@ header a img {
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    margin-bottom: 250%; }
+    margin-bottom: 250%;
+    padding-left: 10%; }
     .contenedor .recetas .card {
-      width: 50%;
+      width: 60%;
       border-radius: 8px;
       overflow: hidden;
       margin: 20px;
@@ -786,7 +792,7 @@ header a img {
     padding-top: 40%; } }
 
 /*boton de whatsapp */
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 380px) and (max-width: 768px) {
   .btn-wsp {
     width: 63px;
     height: 63px;

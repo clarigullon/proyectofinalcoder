@@ -23,7 +23,7 @@ header {
 }
 
 div .fondoFoto {
-    background: url(../imagenespilares/fotoheader-min.jpg);
+    background: url(../imagenespilares/fondoH.jpg);
     width: 100%;
     background-size: cover;
     min-height: 100vh;
@@ -40,34 +40,38 @@ div .tituloPrincipal h1 {
 }
 /* header secciones postres */
 .fondoPostre {
-    background: url(../imagenespilares/rogel.jpg);
+    background: url(../imagenespilares/postres.jpg);
     width: 100%;
     background-size: cover;
     min-height: 100vh;
+    margin-bottom: 5%;
 }
 
 /*header seccion para el te */ 
 .fondoParate {
-    background: url(../imagenespilares/headerparaelte-min.JPG);
+    background: url(../imagenespilares/paraelte2.jpg);
     width: 100%;
     background-size: cover;
     min-height: 100vh;
+    margin-bottom: 5%;
 }
 
 /*header seccion de salados */ 
 .fondoSalados {
-    background: url(../imagenespilares/salados.jpg);
+    background: url(../imagenespilares/salados2.jpg);
     width: 100%;
     background-size: cover;
     min-height: 100vh;
+    margin-bottom: 5%;
 }
 
 /* header seccion regalos */ 
 .fondoRegalos {
-    background: url(../imagenespilares/headerregalo-min.jpg);
+    background: url(../imagenespilares/regalos2.jpg);
     width: 100%;
     background-size: cover;
     min-height: 100vh;
+    margin-bottom: 5%;
 }
 
 
@@ -77,7 +81,7 @@ div .tituloPrincipalregalos h1 {
 
 /*header seccion recetas*/ 
 .fondoRecetas {
-    background: url(../imagenespilares/fondorecetas-min.jpg);
+    background: url(../imagenespilares/recetas.jpg);
     width: 100%;
     background-size: cover;
     min-height: 85vh;
@@ -90,7 +94,7 @@ div .tituloPrincipalrecetas h1 {
 
 /*header preguntas frecuentes */ 
 .fondoPreguntas {
-    background: url(../imagenespilares/fondopreguntas-min.jpg);
+    background: url(../imagenespilares/preguntas.jpg);
     width: 100%;
     background-size: cover;
     min-height: 80vh;
@@ -102,7 +106,7 @@ div .tituloPrincipalpreguntas h1 {
 
 /*header quienes somos*/ 
 .fondoQuienes {
-    background: url(../imagenespilares/fondoquienessomos-min.jpg);
+    background: url(../imagenespilares/quienes.jpg);
     width: 100%;
     background-size: cover;
     min-height: 80vh;

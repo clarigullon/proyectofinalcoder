@@ -33,6 +33,13 @@ div .tituloPrincipal h1 {
   position: fixed;
   z-index: 1000; }
 
+/*margenes*/
+.info {
+  margin-left: 5%; }
+
+.premezcla {
+  margin-right: 5%; }
+
 /* header secciones postres */
 .fondoPostre {
   background: url(../imagenespilares/postres.jpg);
@@ -281,6 +288,7 @@ aside {
   color: #FFF;
   border-radius: 50px;
   text-align: center;
+  justify-content: center;
   font-size: 35px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
   z-index: 100;
@@ -664,6 +672,9 @@ header a img {
   .contenedor .premezcla {
     grid-column: 1/2;
     grid-row: 3/4; }
+  .premezcla {
+    margin-right: 5%;
+    margin-left: 5%; }
   .color_subtitulos {
     color: #cb997e; }
   p {

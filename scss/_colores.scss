@@ -19,6 +19,7 @@
 .subtitulos_quienes {
     color:#cb997e;
     text-align: center;
+    margin-left: 5%;
 }
 
 /*fondonavbar*/
@@ -47,31 +48,22 @@ aside {
 
 /* estilo color pie de pagina */
 .footer {
-    background:#f0efeb;
-    padding: 30px;
-        .social-icons { 
-            ul {
-                list-style: none;
-                li {
-                    i .fas {
-                        color: black;
-                        text-decoration: none;
-                    }
-                
-                }
+    .contenedorFooter {
+        background-color:#f0efeb;
+            .infoFooter {
+                color:black;
             }
-            .tituloFooter {
-                color: black;
-                
-            }
-        }
-        
+    }
+}
+.footer ul li a i {
+    color: black;
+}
+.footer {
+    background-color: #f0efeb;
 }
 
-i {
-    color: black;
-    text-decoration: none;
-}
+
+
 
 /* background color del flexbox */ 
 .padreFlex {

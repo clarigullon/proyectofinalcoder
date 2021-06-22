@@ -140,10 +140,7 @@ div .tituloPrincipalpreguntas h1 {
     width: 33.333%;
     float: left;
 }
-.banner {
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
+
 .palabras-banner {
     padding-top: 10%;
 }
@@ -151,7 +148,7 @@ div .tituloPrincipalpreguntas h1 {
 .columnas_fotos {
     width: 25%;
     float: left;
-    margin-top: 15px;
+    
    
 }
 
@@ -261,16 +258,10 @@ aside {
     flex-grow: 0;
     overflow: hidden;
     text-align: center;
-        img:hover {
-            transform: scale(2,2);
-        }
 }
 
 .padreFlex .hijosFlex img {
     width: 70%;
-}
-.padreFlex .recetasFlex p {
-    text-align: left;
 }
 
 .recetasFlex {
@@ -288,6 +279,7 @@ aside {
 .recetasFlex p {
     padding-left: 30px;
     padding-right: 30px;
+    text-align: left;
 }
 
 .color_subtitulosrecetas {

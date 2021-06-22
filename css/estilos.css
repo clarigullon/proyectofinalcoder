@@ -118,18 +118,13 @@ div .tituloPrincipalpreguntas h1 {
   width: 33.333%;
   float: left; }
 
-.banner {
-  padding-top: 5%;
-  padding-bottom: 5%; }
-
 .palabras-banner {
   padding-top: 10%; }
 
 /*columnas de las fotos de comidas */
 .columnas_fotos {
   width: 25%;
-  float: left;
-  margin-top: 15px; }
+  float: left; }
 
 /* configuracion del aside */
 .columnas_fotos h2 {
@@ -220,14 +215,9 @@ aside {
   flex-grow: 0;
   overflow: hidden;
   text-align: center; }
-  .hijosFlex img:hover {
-    transform: scale(2, 2); }
 
 .padreFlex .hijosFlex img {
   width: 70%; }
-
-.padreFlex .recetasFlex p {
-  text-align: left; }
 
 .recetasFlex {
   display: flex;
@@ -242,7 +232,8 @@ aside {
 
 .recetasFlex p {
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  text-align: left; }
 
 .color_subtitulosrecetas {
   margin-right: 30%; }
@@ -429,9 +420,14 @@ aside {
   font-size: 150; }
 
 /* tamaño letra recetas */
-.padreFlex .recetasFlex p {
-  font-size: 170%;
-  text-align: left; }
+.padreFlex p {
+  font-size: 140%;
+  text-align: left;
+  font-family: Josefin Sans; }
+
+.preguntasFlex p {
+  font-family: Josefin Sans;
+  font-size: 120%; }
 
 /* estilo tipografia footer */
 .footer ul .social-icons li i {
@@ -473,10 +469,6 @@ aside {
 .navbar-color {
   background-color: #f0efeb;
   width: 100%; }
-
-/*color letra de los parrafos */
-.parrafo_color {
-  color: #565656; }
 
 /*colores del banner informativo */
 .bannerinf_columnas {
@@ -681,7 +673,7 @@ header a img {
   .color_subtitulosrecetas {
     margin-right: 15%; }
   .padreFlex .recetasFlex p {
-    font-size: 100%; }
+    font-size: 120%; }
   .quienesFlex {
     width: 100%;
     margin-top: 30px;
@@ -689,6 +681,8 @@ header a img {
     flex-grow: 0;
     overflow: hidden;
     text-align: center; }
+  .padreFlex .quienesFlex img {
+    width: 40%; }
   .padreFlex h3 {
     padding-top: 30px; }
   /* tamaño de las fotos seccion quienes somos */
@@ -840,7 +834,7 @@ header a img {
       width: 60%;
       margin-left: 3%; }
   .padreFlex .recetasFlex p {
-    font-size: 95%;
+    font-size: 120%;
     text-align: left;
     padding-top: 5%; }
   .color_subtitulosrecetas {
@@ -865,7 +859,10 @@ header a img {
     margin-bottom: 30px;
     flex-grow: 0;
     overflow: hidden;
-    text-align: center; }
+    text-align: center;
+    flex-direction: column; }
+  .padreFlex .quienesFlex img {
+    width: 100%; }
   .padreFlex .color_subtitulosrecetas {
     padding-top: 30px; }
   /* tamaño de las fotos seccion quienes somos */

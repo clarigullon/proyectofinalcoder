@@ -210,7 +210,7 @@
         padding-right: 30px;
         text-align: center;
     }
-    
+
     .padreFlex__pregunta {
         display: flex;
         flex-direction: column;
@@ -232,7 +232,7 @@
     }
 
     .padreFlex .recetasFlex p {
-        font-size: 100%;
+        font-size: 120%;
     }
     .quienesFlex {
         width: 100%;
@@ -241,6 +241,11 @@
         flex-grow: 0;
         overflow: hidden;
         text-align: center;
+        
+    }
+
+    .padreFlex .quienesFlex img {
+        width: 40%;
     }
     
     .padreFlex h3 {
@@ -464,7 +469,7 @@
     }
       
     .padreFlex .recetasFlex p {
-        font-size: 95%;
+        font-size: 120%;
         text-align: left;
         padding-top: 5%;
     }
@@ -497,8 +502,12 @@
         flex-grow: 0;
         overflow: hidden;
         text-align: center;
+        flex-direction: column;
+
     }
-    
+    .padreFlex .quienesFlex img {
+        width: 100%;
+    }
     .padreFlex .color_subtitulosrecetas {
         padding-top: 30px;
     }

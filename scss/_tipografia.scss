@@ -34,10 +34,17 @@
 }
 
 /* tamaño letra recetas */
-.padreFlex .recetasFlex p {
-    font-size: 170%;
+.padreFlex p {
+    font-size: 140%;
     text-align: left;
+    font-family: Josefin Sans;
 }
+
+.preguntasFlex p {
+    font-family: Josefin Sans;
+    font-size: 120%;
+}
+
 /* estilo tipografia footer */ 
 .footer {
     ul .social-icons {

@@ -1,24 +1,45 @@
+let opcion = prompt("Ingrese si desea Rogel o Brownie")
+let cantidad = parseInt(prompt("Ingrese cuantos quiere"));
 
-$(document).ready(function () {
-	// Activate Carousel
-	$("#myCarousel").carousel();
+let rogelDisponible = 1;
+let brownieDisponible = 1;
 
-	// Enable Carousel Indicators
-	$(".item1").click(function () {
-		$("#myCarousel").carousel(0);
-	});
-	$(".item2").click(function () {
-		$("#myCarousel").carousel(1);
-	});
-	$(".item3").click(function () {
-		$("#myCarousel").carousel(2);
-	});
 
-	// Enable Carousel Controls
-	$(".carousel-control-prev").click(function () {
-		$("#myCarousel").carousel("prev");
-	});
-	$(".carousel-control-next").click(function () {
-		$("#myCarousel").carousel("next");
-	});
-});
+if (opcion.toUpperCase() === "ROGEL") {
+    verificarStock(cantidad, rogelDisponible)
+} else if(opcion.toUpperCase() === "BROWNIE") {
+    verificarStock(cantidad, brownieDisponible)
+} else {
+    alert("El numero ingresado es invalido")
+}
+
+function verificarStock (postreIngresado, stockDisponible) {
+    if(postreIngresado === stockDisponible){
+        solicitarDatos()
+    } else {
+        alert("Se agotó el stock del postre. Puede elegir otro o encargarlo")
+    }
+}
+
+function solicitarDatos (){
+    let nombre = prompt("Ingrese su nombre")
+    let entrega = prompt("Ingrese modalidad de entrega")
+    let tamaño = prompt ("Ingrese el tamaño del postre: grande o chico")
+
+    while(nombre === "" || nombre === null || tamaño === "" || tamaño === null|| entrega === "" || entrega === null) {
+        alert("Los valores ingresados son incorrectos, intente nuevamente")
+        nombre = prompt("Ingrese su nombre")
+        tamaño = prompt("Ingrese el tamaño del postre: grande o chico")
+        entrega = prompt("Ingrese modalidad de entrega")
+
+    }
+    
+    devolverReserva(nombre, tamaño, entrega)
+
+}
+
+function devolverReserva(nombreReserva, tamañoReserva){
+    let numeroReserva = 20;
+    alert("Gracias, "+ nombreReserva + "! Se reservó un postre " + tamañoReserva + ". Su número de reserva es el numero " + numeroReserva)
+
+}

@@ -524,7 +524,32 @@
         padding-top: 40%;
     }
     
+    #padreFlex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content:space-around;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .productosCarrito {
+        width: 100%;
+        margin-top: 30px;
+        flex-grow: 0;
+        overflow: hidden;
+        text-align: center;
+            img:hover {
+                transform: scale(2,2);
+            }
+        flex-wrap: wrap;
+        
+
+    } 
 }
+
 /*boton de whatsapp */ 
 @media only screen and (min-width: 380px) and (max-width: 768px){
     .btn-wsp {

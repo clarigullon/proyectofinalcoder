@@ -333,6 +333,36 @@ aside {
 .btn-wsp:hover {
   background: #20ba5a; }
 
+#padreFlex img {
+  width: 30%; }
+
+#padreFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 150%; }
+
+.productosCarrito {
+  width: 25%;
+  margin-top: 30px;
+  flex-grow: 0;
+  overflow: hidden;
+  text-align: center; }
+
+#padreFlex .productosCarrito img {
+  width: 80%; }
+
+.btn {
+  width: 50%;
+  padding: 8px;
+  background-color: #f0efeb;
+  outline: none;
+  border: solid #cb997e;
+  cursor: pointer; }
+
 /*grilla contenedora general*/
 .contenedorTotal {
   width: 100%;
@@ -871,7 +901,24 @@ header a img {
   .fotosQuienes img {
     width: 70%; }
   div .tituloPrincipalregalos h1 {
-    padding-top: 40%; } }
+    padding-top: 40%; }
+  #padreFlex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center; }
+  .productosCarrito {
+    width: 100%;
+    margin-top: 30px;
+    flex-grow: 0;
+    overflow: hidden;
+    text-align: center;
+    flex-wrap: wrap; }
+    .productosCarrito img:hover {
+      transform: scale(2, 2); } }
 
 /*boton de whatsapp */
 @media only screen and (min-width: 380px) and (max-width: 768px) {

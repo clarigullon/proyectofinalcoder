@@ -343,7 +343,8 @@ aside {
   align-items: baseline;
   justify-content: space-around;
   width: 100%;
-  font-size: 150%; }
+  font-size: 150%;
+  font-family: Raleway; }
 
 .productosCarrito {
   width: 25%;
@@ -354,6 +355,58 @@ aside {
 
 #padreFlex .productosCarrito img {
   width: 80%; }
+
+#postresCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 100%; }
+
+#postresCards p {
+  text-align: center; }
+
+#postresCards img {
+  width: 80%; }
+
+#paraelteCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 100%; }
+
+#paraelteCards p {
+  text-align: center; }
+
+#paraelteCards img {
+  width: 80%; }
+
+#saladosCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 100%; }
+
+#saladosCards p {
+  text-align: center; }
+
+#saladosCards img {
+  width: 80%; }
+
+.padreFlex {
+  width: 25%;
+  margin-top: 30px;
+  flex-grow: 0;
+  overflow: hidden;
+  text-align: center; }
 
 .btn {
   width: 50%;

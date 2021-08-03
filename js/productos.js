@@ -356,8 +356,9 @@ if (paginaActual.includes("desayunos")) {
 }
 let btn = document.getElementsByClassName("btn");
 for (let i = 0; btn.length > i; i++) {
-  btn[i].addEventListener("click", agregarCarrito);
+  $("#" + btn [i].id).on("click", agregarCarrito)
 }
+
 function clickeado(e) {
   e.target.style.opacity = "0.8";
   e.target.style.backgroundColor = "#ffd7ba"; 
@@ -376,7 +377,7 @@ function eliminarProductoLocalStorage(carrito){
   let productosLS;
   productosLS = this.producto();
   productosLS.forEach(function(productoLS, index){
-      if(productoLS.id === productoID){
+      if(productoLS.id === carrito){
           productosLS.splice(index, 1);
       }
   });

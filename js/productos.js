@@ -169,7 +169,7 @@ const rellenas = new Producto(
   23,
   "imagenesventa/havanna-min.jpg"
 );
-
+ 
 const limon = new Producto(
   "Cookies de limón",
   "paraelte",
@@ -268,7 +268,6 @@ const bizcochitoslibritos = new Producto(
   37,
   "imagenesventa/bizcochitoslibritos-min.JPG"
 );
-
 productos = [];
 productos.push(
   superdesayuno,
@@ -351,19 +350,46 @@ if (paginaActual.includes("desayunos")) {
       <p>  ${producto.nombre}</p>
       <b> $ ${producto.precio}</b> <br>
       <button id="${producto.id}" class="btn">AGREGAR</button> <br>
-      </div> `);
+	  </div>`);
     }
 }
 }
 let btn = document.getElementsByClassName("btn");
 for (let i = 0; btn.length > i; i++) {
-  btn[i].addEventListener("click", agregarAlCarrito);
+  btn[i].addEventListener("click", agregarCarrito);
 }
 function clickeado(e) {
   e.target.style.opacity = "0.8";
-  e.target.style.backgroundColor = "#ffd7ba";
-  e.target.innerHTML = "Reservado";
+  e.target.style.backgroundColor = "#ffd7ba"; 
+  e.target.innerHTML = "Agregado!"; 
 }
-function agregarAlCarrito(e) {
+
+let carrito = []; 
+function agregarCarrito(e) {
   clickeado(e);
+  let productoClickeado = productos.find((item) => item.id == e.target.id);
+  carrito.push(productoClickeado);
+  localStorage.setItem("MiCarrito", JSON.stringify(carrito));
+  $("#cartCount").text(carrito.length);
 }
+function eliminarProductoLocalStorage(carrito){
+  let productosLS;
+  productosLS = this.producto();
+  productosLS.forEach(function(productoLS, index){
+      if(productoLS.id === productoID){
+          productosLS.splice(index, 1);
+      }
+  });
+
+  localStorage.setItem('MiCarrito', JSON.stringify(carrito));
+}
+function vaciarLocalStorage(){
+  localStorage.clear();
+}
+
+
+
+
+
+
+

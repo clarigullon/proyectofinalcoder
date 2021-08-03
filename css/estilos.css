@@ -416,6 +416,87 @@ aside {
   border: solid #cb997e;
   cursor: pointer; }
 
+.openbtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none; }
+
+i.fa-shopping-cart {
+  font-size: 30px;
+  color: #565656; }
+
+#cartCount {
+  position: absolute;
+  font-size: 16px;
+  color: #565656;
+  padding: 0 5px;
+  top: 17px;
+  margin-left: -10px; }
+
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px; }
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #05c61f; }
+
+/* The sidebar menu */
+.sidebar {
+  text-align: center;
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  right: 0;
+  top: 0;
+  background-color: #5a5a5a;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidebar */ }
+
+/* The sidebar links */
+.sidebar a {
+  text-align: center;
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 40px;
+  color: #f5978e;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
+  height: 30px; }
+
+.sidebar a:hover {
+  color: #3ccfc8; }
+
+.openbtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: coral;
+  text-align: center;
+  width: 300px;
+  border: solid 2px grey;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 8px; }
+
 /*grilla contenedora general*/
 .contenedorTotal {
   width: 100%;

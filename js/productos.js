@@ -385,8 +385,7 @@ function mostrarItemsEnCarrito(array) {
     $("#carrito").append(` <div class="carrito"><h3> ID: ${producto.id}</h3>
                                  <img src= ${producto.img} />
                                 <p>  Producto: ${producto.nombre}</p>
-                               <b> $ ${producto.precio}</b> 
-                              <button id="${producto.id}" class="btn-remover" > Remover</button></div>`);
+                               <b> $ ${producto.precio}</b> `);
   }
 }
 function eliminarProductoLocalStorage(carrito){

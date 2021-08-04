@@ -30,10 +30,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
+                <li class="nav-item" id="menuCentrado">
                   <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" id="menuCentrado">
                   <a class="nav-link dropdown-toggle" href="carta.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     CARTA
                   </a>
@@ -44,23 +44,16 @@
                     <li><a class="dropdown-item" href="desayunos.html">REGALOS</a></li>
                   </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="menuCentrado">
                   <a class="nav-link" href="recetas.html">RECETAS</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="menuCentrado">
                   <a class="nav-link" href="preguntasfrecuentes.html">PREGUNTAS FRECUENTES</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="menuCentrado">
                   <a class="nav-link" href="quienessomos.html">QUIENES SOMOS</a>
                 </li>
-                
               </ul>
-            </div>
-            <div id="main" class="nav">
-              <button class="openbtn">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="badge badge-warning" id="cartCount">0</span>
-              </button>
             </div>
           </div>
         </nav>      
@@ -76,8 +69,23 @@
     <main>
         <h2 class="color_subtitulos ">DESAYUNOS Y BANDEJITAS</h2>
         <div class="padreFlex"></div>
-        <div id="padreFlex">
+        <div id="padreFlex"></div>
+        <div cid="sidenav">
+          <div class="container-fluid text-center">
+            <button class="openbtn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="badge badge-warning" id="cartCount">0</span>
+            </button>
+            <span class="close-cart">
+              <a href="javascript:void(0)" class="closebtn"></a>
+            </span>
+            <h3>Tu Carrito</h3>
+            <div id="carrito" class="container-fluid text-center"></div>
+            </div>
+          </div>
         </div>
+         
+        
         
         
         

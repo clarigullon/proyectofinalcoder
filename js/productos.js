@@ -1,3 +1,10 @@
+function openNav () {
+  $("#sidenav")[0].style.width = "250px";
+} 
+function closeNav() {
+  $("#sidenav")[0].style.width = "0px";
+}
+
 class Producto {
   constructor(nombre, seccion, precio, id, img) {
     this.nombre = nombre;
@@ -309,6 +316,7 @@ productos.push(
   bizcochitoslibritos
 );
 let paginaActual = window.location.pathname;
+
 if (paginaActual.includes("desayunos")) {
   for (const producto of productos) {
     if (producto.seccion === "regalos") {
@@ -356,22 +364,30 @@ if (paginaActual.includes("desayunos")) {
 }
 let btn = document.getElementsByClassName("btn");
 for (let i = 0; btn.length > i; i++) {
-  $("#" + btn [i].id).on("click", agregarCarrito)
+  $("#" + btn [i].id).on("click", agregarAlCarrito)
 }
-
 function clickeado(e) {
   e.target.style.opacity = "0.8";
   e.target.style.backgroundColor = "#ffd7ba"; 
   e.target.innerHTML = "Agregado!"; 
 }
-
 let carrito = []; 
-function agregarCarrito(e) {
+function agregarAlCarrito(e) {
   clickeado(e);
   let productoClickeado = productos.find((item) => item.id == e.target.id);
   carrito.push(productoClickeado);
+  mostrarItemsEnCarrito(carrito);
   localStorage.setItem("MiCarrito", JSON.stringify(carrito));
-  $("#cartCount").text(carrito.length);
+}
+function mostrarItemsEnCarrito(array) {
+  $("#carrito").empty();
+  for (const producto of array) {
+    $("#carrito").append(` <div class="carrito"><h3> ID: ${producto.id}</h3>
+                                 <img src= ${producto.img} />
+                                <p>  Producto: ${producto.nombre}</p>
+                               <b> $ ${producto.precio}</b> 
+                              <button id="${producto.id}" class="btn-remover" > Remover</button></div>`);
+  }
 }
 function eliminarProductoLocalStorage(carrito){
   let productosLS;

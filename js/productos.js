@@ -362,10 +362,7 @@ if (paginaActual.includes("desayunos")) {
     }
 }
 }
-let btn = document.getElementsByClassName("btn");
-for (let i = 0; btn.length > i; i++) {
-  $("#" + btn [i].id).on("click", agregarAlCarrito)
-}
+$(".btn").click((e)=>agregarAlCarrito(e))
 function clickeado(e) {
   e.target.style.opacity = "0.8";
   e.target.style.backgroundColor = "#ffd7ba"; 

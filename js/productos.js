@@ -372,14 +372,18 @@ let carrito = [];
 function agregarAlCarrito(e) {
   clickeado(e);
   let productoClickeado = productos.find((item) => item.id == e.target.id);
+  if (localStorage.getItem("MiCarrito") != null) {
+    carrito = JSON.parse(localStorage.getItem("MiCarrito"))
+    console.log(carrito)
+  } 
   carrito.push(productoClickeado);
   mostrarItemsEnCarrito(carrito);
   localStorage.setItem("MiCarrito", JSON.stringify(carrito));
 }
 function mostrarItemsEnCarrito(array) {
-  $("#carrito").empty();
+  $("#mySidenav").empty();
   for (const producto of array) {
-    $("#carrito").append(` <div class="carrito"><h3> ID: ${producto.id}</h3>
+    $("#mySidenav").append(` <div class="itemCarrito"><h3> ID: ${producto.id}</h3>
                                  <img src= ${producto.img} />
                                 <p>  Producto: ${producto.nombre}</p>
                                <b> $ ${producto.precio}</b> `);
@@ -399,10 +403,9 @@ function eliminarProductoLocalStorage(carrito){
 function vaciarLocalStorage(){
   localStorage.clear();
 }
-
-
-
-
-
-
-
+$("#carrito").click(() => openNav())
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";}
+$("#sideNavClose").click(() => closeNav())
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";}

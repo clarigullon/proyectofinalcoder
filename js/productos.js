@@ -1,10 +1,3 @@
-function openNav () {
-  $("#sidenav")[0].style.width = "250px";
-} 
-function closeNav() {
-  $("#sidenav")[0].style.width = "0px";
-}
-
 class Producto {
   constructor(nombre, seccion, precio, id, img) {
     this.nombre = nombre;
@@ -362,6 +355,13 @@ if (paginaActual.includes("desayunos")) {
     }
 }
 }
+$("#carrito").click(() => openNav())
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  mostrarItemsEnCarrito(carrito);}
+$("#sideNavClose").click(() => closeNav())
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";}
 $(".btn").click((e)=>agregarAlCarrito(e))
 function clickeado(e) {
   e.target.style.opacity = "0.8";
@@ -374,7 +374,6 @@ function agregarAlCarrito(e) {
   let productoClickeado = productos.find((item) => item.id == e.target.id);
   if (localStorage.getItem("MiCarrito") != null) {
     carrito = JSON.parse(localStorage.getItem("MiCarrito"))
-    console.log(carrito)
   } 
   carrito.push(productoClickeado);
   mostrarItemsEnCarrito(carrito);
@@ -386,8 +385,16 @@ function mostrarItemsEnCarrito(array) {
     $("#mySidenav").append(` <div class="itemCarrito"><h3> ID: ${producto.id}</h3>
                                  <img src= ${producto.img} />
                                 <p>  Producto: ${producto.nombre}</p>
-                               <b> $ ${producto.precio}</b> `);
+                               <b> $ ${producto.precio}</b> 
+                               <button id="${producto.id}" class="btn-remover" > Remover</button></div>`);
+    $(".btn-remover").click((e)=>removerItem(e))
   }
+}
+function removerItem(e) {
+  let indexDelProducto = carrito.findIndex((item) => item.id == e.target.id);
+  carrito.splice(indexDelProducto, 1);
+  mostrarItemsEnCarrito(carrito);
+  $("#cartCount").text(carrito.length);
 }
 function eliminarProductoLocalStorage(carrito){
   let productosLS;
@@ -403,9 +410,3 @@ function eliminarProductoLocalStorage(carrito){
 function vaciarLocalStorage(){
   localStorage.clear();
 }
-$("#carrito").click(() => openNav())
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";}
-$("#sideNavClose").click(() => closeNav())
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";}

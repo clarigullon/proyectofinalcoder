@@ -428,14 +428,6 @@ i.fa-shopping-cart {
   color: #565656;
   padding-right: 500%; }
 
-#cartCount {
-  position: absolute;
-  font-size: 16px;
-  color: #565656;
-  padding: 0 5px;
-  top: 17px;
-  margin-left: -10px; }
-
 .sidenav {
   height: 100%;
   width: 0;
@@ -479,6 +471,11 @@ i.fa-shopping-cart {
 
 .itemCarrito img {
   width: 100%; }
+
+.sidenav .cruz-carrito i {
+  font-size: 300%;
+  padding-left: 45%;
+  color: #565656; }
 
 /*grilla contenedora general*/
 .contenedorTotal {

@@ -361,22 +361,35 @@ function agregarClick(e) {
   e.target.innerHTML = "Agregado!"; 
 }
 let carrito = []; 
+let carritoSeccion = []
 function agregarProducto(e) {
   agregarClick(e);
   let productoClickeado = productos.find((item) => item.id == e.target.id);
-  if (localStorage.getItem("MiCarrito") != null) {
+  if (localStorage.getItem("MiCarrito") !== null) {
     carrito = JSON.parse(localStorage.getItem("MiCarrito"))
-  } 
+  }
+  if (localStorage.getItem(productoClickeado.seccion) !== null) {
+    carritoSeccion = JSON.parse(localStorage.getItem(productoClickeado.seccion));
+  }
   carrito.push(productoClickeado);
+  carritoSeccion.push(productoClickeado);
   agregarItem(productoClickeado);
   localStorage.setItem("MiCarrito", JSON.stringify(carrito));
+  localStorage.setItem(productoClickeado.seccion, JSON.stringify(carritoSeccion));
+}
+function removerItem(e) {
+  console.log("click")
+  carrito = JSON.parse(localStorage.getItem("MiCarrito"));
+  let indexDelProducto = carrito.findIndex((item) => item.id == e.target.id);
+  carrito.splice(indexDelProducto, 1);
+  localStorage.setItem("MiCarrito", JSON.stringify(carrito));
+  localStorage.setItem(getSeccion(paginaActual), JSON.stringify(carrito));
 }
 function agregarItem(producto) {
   $("#mySidenav").append(` <div class="itemCarrito"><h3>  Producto: ${producto.nombre}</h3>
   <img src= ${producto.img} />
   <b> $ ${producto.precio}</b> 
-  <button id="${producto.id}" class="btn-remover" > Remover</button></div>`);
-  $(".btn-remover").click((e)=>removerItem(e))
+  <button id="${producto.id}" class="eliminar" > Remover</button></div>`);
 }
 function mostrarItems(array) {
   for (const producto of array) {
@@ -384,28 +397,52 @@ function mostrarItems(array) {
                                  <img src= ${producto.img} />
                                <b> $ ${producto.precio}</b> 
                                <button id="${producto.id}" class="btn-remover" > Remover</button></div>`);
-    $(".btn-remover").click((e)=>removerItem(e))
   }
-}
-function removerItem(e) {
-  let indexDelProducto = carrito.findIndex((item) => item.id == e.target.id);
-  carrito.splice(indexDelProducto, 1);
 }
 $("#carrito").click(() => openNav())
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   if (localStorage.getItem("MiCarrito") != null) {
-    let carritoLocalStorage = []
-    let carritoTemporal = []
-    carritoLocalStorage = JSON.parse(localStorage.getItem("MiCarrito"))
-    carritoLocalStorage.forEach(item => {
-      if (!carrito.includes(item)) {
-        carritoTemporal.push(item)
-      }   
-    })
-    mostrarItems(carrito)
+    let carritoLocalStorage = JSON.parse(localStorage.getItem("MiCarrito"))
+    let carritoItemsAgregar = [];
+    let carritoTemporalSeccion = [];
+    let seccion = getSeccion();
+    if (localStorage.getItem(seccion) !== null) {
+      carritoTemporalSeccion = JSON.parse(localStorage.getItem(seccion));
+      carritoLocalStorage.forEach(item => {
+        if (carritoTemporalSeccion.findIndex( r=> item.id === r.id) === -1) {
+          carritoItemsAgregar.push(item);
+          carritoTemporalSeccion.push(item);
+        }   
+      })
+      if (carritoTemporalSeccion.length >0 && document.getElementById("mySidenav").childElementCount === 1) {
+        mostrarItems(carritoTemporalSeccion);
+      } else {
+        mostrarItems(carritoItemsAgregar);
+      }
+    }
+    else {
+      carritoTemporalSeccion = carritoLocalStorage;
+      mostrarItems(carritoLocalStorage);
+    }
+    localStorage.setItem(seccion, JSON.stringify(carritoTemporalSeccion));
   }
-} 
+}
+function getSeccion() {
+  if (paginaActual.includes("postres")) {
+    return "postres";
+  }
+  if (paginaActual.includes("desayunos")) {
+    return "regalos";
+  }
+  if (paginaActual.includes("paraelte")) {
+    return "paraelte";
+  }
+  if (paginaActual.includes("salados")) {
+    return "salados";
+  }
+  return "perdiste"
+}
 $("#sideNavClose").click(() => closeNav())
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";

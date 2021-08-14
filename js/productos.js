@@ -356,9 +356,11 @@ if (paginaActual.includes("desayunos")) {
 }
 $(".btn").click((e)=>agregarProducto(e))
 function agregarClick(e) {
-  e.target.style.opacity = "0.8";
-  e.target.style.backgroundColor = "#ffd7ba"; 
-  e.target.innerHTML = "Agregado!"; 
+  if ((e.target !== null) && (e.target !== "undefined")) {
+    e.target.style.opacity = "0.8";
+    e.target.style.backgroundColor = "#ffd7ba"; 
+    e.target.innerHTML = "Agregado!"; 
+  }
 }
 let carrito = []; 
 let carritoSeccion = []
@@ -377,26 +379,33 @@ function agregarProducto(e) {
   localStorage.setItem("MiCarrito", JSON.stringify(carrito));
   localStorage.setItem(productoClickeado.seccion, JSON.stringify(carritoSeccion));
 }
-function removerItem(e) {
-  console.log("click")
-  carrito = JSON.parse(localStorage.getItem("MiCarrito"));
-  let indexDelProducto = carrito.findIndex((item) => item.id == e.target.id);
-  carrito.splice(indexDelProducto, 1);
-  localStorage.setItem("MiCarrito", JSON.stringify(carrito));
-  localStorage.setItem(getSeccion(paginaActual), JSON.stringify(carrito));
-}
 function agregarItem(producto) {
-  $("#mySidenav").append(` <div class="itemCarrito"><h3>  Producto: ${producto.nombre}</h3>
+  $("#mySidenav").append(` <div class="itemCarrito" id="remover${producto.id}"><h3>${producto.nombre}</h3>
   <img src= ${producto.img} />
   <b> $ ${producto.precio}</b> 
-  <button id="${producto.id}" class="eliminar" > Remover</button></div>`);
+  <button id="${producto.id}" class="btn-remover" > Remover</button></div>`);
+  $(".btn-remover").click((e)=>removerItem(e))
 }
 function mostrarItems(array) {
   for (const producto of array) {
-    $("#mySidenav").append(` <div class="itemCarrito"><p>  Producto: ${producto.nombre}</p>
-                                 <img src= ${producto.img} />
-                               <b> $ ${producto.precio}</b> 
-                               <button id="${producto.id}" class="btn-remover" > Remover</button></div>`);
+    agregarItem(producto)
+  }
+  $(".btn-remover").click((e)=>removerItem(e))
+}
+function removerItem(e) {
+  console.log("click")
+  carrito = JSON.parse(localStorage.getItem("MiCarrito"));
+  console.log(carrito)
+  let indexDelProducto = carrito.findIndex((item) => item.id == e.target.id);
+  if (indexDelProducto !== -1) {
+    carrito.splice(indexDelProducto, 1);
+    localStorage.setItem("MiCarrito", JSON.stringify(carrito));
+    localStorage.setItem("postres", JSON.stringify(carrito));
+    localStorage.setItem("paraelte", JSON.stringify(carrito));
+    localStorage.setItem("salados", JSON.stringify(carrito));
+    localStorage.setItem("regalos", JSON.stringify(carrito));
+    let idARemover = "#remover" + e.target.id
+    $(idARemover).remove()
   }
 }
 $("#carrito").click(() => openNav())

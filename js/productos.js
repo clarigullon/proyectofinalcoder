@@ -60,7 +60,7 @@ const helada = new Producto(
   "Torta Helada",
   "postres",
   Math.random().toString(36).substr(2, 9),
-  1000,
+  1200,
   "imagenesventa/helad-min.JPG"
 );
 const brownie = new Producto(
@@ -116,56 +116,56 @@ const alfachoco = new Producto(
   "Alfajores de Chocolate",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  500,
   "imagenesventa/alfachocolate-min.JPG"
 );
 const maizena = new Producto(
   "Alfajorcitos de Maizena",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  500,
   "imagenesventa/maizenavert.jpg"
 );
 const nuez = new Producto(
   "Alfajorcitos de Nuez",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  500,
   "imagenesventa/alfanuez-min.jpg"
 );
 const alfajocookies = new Producto(
   "Alfacookies",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  600,
   "imagenesventa/paraelte.jpg"
 );
 const delicious = new Producto(
   "Delicious",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  300,
   "imagenesventa/delicious-min.jpg"
 );
 const mani = new Producto(
   "Cookies de Maní",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  300,
   "imagenesventa/cookiesmani-min.jpg"
 );
 const chips = new Producto(
   "Cookies con Chips",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  250,
   "imagenesventa/cookieschoco-min.jpg"
 );
 const rellenas = new Producto(
   "Cookies rellenas de limón",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  300,
   "imagenesventa/havanna-min.jpg"
 );
  
@@ -173,63 +173,63 @@ const limon = new Producto(
   "Cookies de limón",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  250,
   "imagenesventa/limon-min.jpg"
 );
 const anillos = new Producto(
   "Anillos bañados en chocolate",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  300,
   "imagenesventa/anillos-min.JPG"
 );
 const anillosblanco = new Producto(
   "Anillos bañados en chocolate blanco",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  300,
   "imagenesventa/anilloblanco-min.jpg"
 );
 const aniz = new Producto(
   "Cookies de Aniz",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  250,
   "imagenesventa/aniz.jpg"
 );
 const pandecampo = new Producto(
   "Pan de Campo",
   "salados",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  350,
   "imagenesventa/pancampo.jpg"
 );
 const pandemolde = new Producto(
   "Pan de Molde",
   "salados",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  300,
   "imagenesventa/pandemolde.jpg"
 );
 const pandetrigo = new Producto(
   "Pan de Trigo Sarraceno",
   "salados",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  300,
   "imagenesventa/pantrigosarra.jpg"
 );
 const pandequeso = new Producto(
   "Pancitos de Queso",
   "salados",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  440,
   "imagenesventa/panqueso.jpg"
 );
 const pandecebolla = new Producto(
   "Pancitos Saborizados de Cebolla",
   "salados",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  300,
   "imagenesventa/pancebolla.jpg"
 );
 const pancitotrigo = new Producto(
@@ -243,28 +243,28 @@ const panchips = new Producto(
   "Pancitos de Chips",
   "salados",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  280,
   "imagenesventa/chips-min.jpg"
 );
 const pizza = new Producto(
   "Prepizza",
   "salados",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  110,
   "imagenesventa/pizza.jpg"
 );
 const bizcochitosgrasa = new Producto(
   "Bizcochitos de grasa",
   "salados",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  250,
   "imagenesventa/bizcochitosgrasa-min.JPG"
 );
 const bizcochitoslibritos = new Producto(
   "Bizcochitos de grasa",
   "salados",
   Math.random().toString(36).substr(2, 9),
-  1100,
+  300,
   "imagenesventa/bizcochitoslibritos-min.JPG"
 );
 productos = [];

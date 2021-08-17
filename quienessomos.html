@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,700;1,200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="icon" href="imagenespilares/icono-min.png">
     <title>QUIENES SOMOS</title>
 </head>
@@ -19,6 +20,11 @@
     <a href="https://api.whatsapp.com/send?phone=+5492494380956" class="btn-wsp" target="_blank">
       <i class="fab fa-whatsapp"></i>
     </a>
+    <div id="mySidenav" class="sidenav">
+      <div id="sideNavClose" class="cruz-carrito" type="button">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
     <div class="contenedorTotal">
         <header class="header">
             <nav class="navbar navbar-expand-lg navbar-light navbar-color">
@@ -55,6 +61,9 @@
                       
                     </ul>
                   </div>
+                  <div id="carrito" type="button">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>      
                 </div>
               </nav>
             
@@ -68,7 +77,17 @@
         </header>
     </div>
     <main>
-      <div class="padreFlex">
+      <div id="mySidenav">
+        <div class="container-fluid text-center">
+          <button class="openbtn">
+          </button>
+          <span class="close-cart">
+            <a href="javascript:void(0)" class="closebtn"></a>
+          </span>
+          <div id="carrito" class="container-fluid text-center"></div>
+        </div>
+      </div>
+      <div class="padreFlexSecciones">
       <div class="fotosQuienes">
         <h3 class="subtitulos_quienes">¿QUIENES SOMOS?</h3>
         <div class="quienesFlex">
@@ -120,6 +139,8 @@
     </footer>
   <!--fin de pie de pagina con datos de contacto-->
 
+
+<script src="js/productos.js"></script>
 <script src="https://kit.fontawesome.com/c8bfb8fcf1.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

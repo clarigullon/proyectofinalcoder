@@ -203,7 +203,7 @@ aside {
   list-style: none; }
 
 /* estilos flexbox */
-.padreFlex {
+.padreFlexSecciones {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -218,7 +218,7 @@ aside {
   overflow: hidden;
   text-align: center; }
 
-.padreFlex .hijosFlex img {
+.padreFlexSecciones .hijosFlex img {
   width: 70%; }
 
 .recetasFlex {
@@ -249,7 +249,7 @@ aside {
   padding-right: 30px;
   padding-bottom: 30px; }
 
-.padreFlex .quienesFlex img {
+.padreFlexSecciones .quienesFlex img {
   width: 20%; }
 
 .quienesFlex p {
@@ -258,12 +258,12 @@ aside {
   text-align: left;
   font-size: 100%; }
 
-.padreFlex iframe {
+.padreFlexSecciones iframe {
   width: 100%;
   background-size: cover;
   min-height: 60vh; }
 
-.padreFlex h3 {
+.padreFlexSecciones h3 {
   padding-top: 30px; }
 
 .preguntasFlex {
@@ -637,7 +637,7 @@ aside {
   background-color: #f0efeb; }
 
 /* background color del flexbox */
-.padreFlex {
+.padreFlexSecciones {
   background-color: #f8edeb; }
 
 /*color parrafo recetas pag principal */

@@ -1,10 +1,11 @@
 class Producto {
-  constructor(nombre, seccion, id, precio, img) {
+  constructor(nombre, seccion, id, precio, img, cantidad) {
     this.nombre = nombre;
     this.seccion = seccion;
     this.precio = precio;
     this.id = id;
     this.img = img;
+    this.cantidad = cantidad;
   }
 }
 const superdesayuno = new Producto(
@@ -12,161 +13,184 @@ const superdesayuno = new Producto(
   "regalos",
   Math.random().toString(36).substr(2, 9),
   1800,
-  "imagenesventa/desayunog-min.jpg"
+  "imagenesventa/desayunog-min.jpg",
+  0
 );
 const desayuno = new Producto(
   "Desayuno",
   "regalos",
   Math.random().toString(36).substr(2, 9),
   1500,
-  "imagenesventa/desayunochic-min.jpg"
+  "imagenesventa/desayunochic-min.jpg",
+  0
 );
 const bandejitagrande = new Producto(
   "Bandejita de tortitas x16",
   "regalos",
   Math.random().toString(36).substr(2, 9),
   900,
-  "imagenesventa/bandejitagrande-min.jpg"
+  "imagenesventa/bandejitagrande-min.jpg",
+  0
 );
 const bandejitachica = new Producto(
   "Bandejita de mini tortitas x8",
   "regalos",
   Math.random().toString(36).substr(2, 9),
   700,
-  "imagenesventa/bandejitachica-min.jpg"
+  "imagenesventa/bandejitachica-min.jpg",
+  0
 );
 const bomba = new Producto(
   "Torta Bomba",
   "postres",
   Math.random().toString(36).substr(2, 9),
   1300,
-  "imagenesventa/bomba-min.JPG"
+  "imagenesventa/bomba-min.JPG",
+  0
 );
 const cabsha = new Producto(
   "Torta Cabsha",
   "postres",
   Math.random().toString(36).substr(2, 9),
   1200,
-  "imagenesventa/cabsha-min.jpeg"
+  "imagenesventa/cabsha-min.jpeg",
+  0
 );
 const rogel = new Producto(
   "Rogel",
   "postres",
   Math.random().toString(36).substr(2, 9),
   1300,
-  "imagenesventa/rogel2.JPG"
+  "imagenesventa/rogel2.JPG",
+  20
 );
 const helada = new Producto(
   "Torta Helada",
   "postres",
   Math.random().toString(36).substr(2, 9),
   1200,
-  "imagenesventa/helad-min.JPG"
+  "imagenesventa/helad-min.JPG",
+  0
 );
 const brownie = new Producto(
   "Brownie",
   "postres",
   Math.random().toString(36).substr(2, 9),
   1300,
-  "imagenespilares/postreddl.jpg"
+  "imagenespilares/postreddl.jpg",
+  0
 );
 const conitos = new Producto(
   "Conitos de Dulce de Leche",
   "postres",
   Math.random().toString(36).substr(2, 9),
   800,
-  "imagenesventa/conitos2-min.jpg"
+  "imagenesventa/conitos2-min.jpg",
+  0
 );
 const bombaf = new Producto(
   "Torta Rellena",
   "postres",
   Math.random().toString(36).substr(2, 9),
   1300,
-  "imagenesventa/bombafrut-min.jpg"
+  "imagenesventa/bombafrut-min.jpg",
+  0
 );
 const frutilla = new Producto(
   "Tarta de Frutilla",
   "postres",
   Math.random().toString(36).substr(2, 9),
   900,
-  "imagenesventa/tartafrut.jpg"
+  "imagenesventa/tartafrut.jpg",
+  0
 );
 const lemonpie = new Producto(
   "Lemon Pie",
   "postres",
   Math.random().toString(36).substr(2, 9),
   900,
-  "imagenesventa/lemonpie-min.jpg"
+  "imagenesventa/lemonpie-min.jpg",
+  0
 );
 const manzana = new Producto(
   "Tarta de Manzana",
   "postres",
   Math.random().toString(36).substr(2, 9),
   900,
-  "imagenesventa/tartamanz.jpeg"
+  "imagenesventa/tartamanz.jpeg",
+  0
 );
 const crumble = new Producto(
   "Crumble de Manzana",
   "postres",
   Math.random().toString(36).substr(2, 9),
   1100,
-  "imagenesventa/crumble-min.jpg"
+  "imagenesventa/crumble-min.jpg",
+  0
 );
 const alfachoco = new Producto(
   "Alfajores de Chocolate",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   500,
-  "imagenesventa/alfachocolate-min.JPG"
+  "imagenesventa/alfachocolate-min.JPG",
+  0
 );
 const maizena = new Producto(
   "Alfajorcitos de Maizena",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   500,
-  "imagenesventa/maizenavert.jpg"
+  "imagenesventa/maizenavert.jpg",
+  0
 );
 const nuez = new Producto(
   "Alfajorcitos de Nuez",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   500,
-  "imagenesventa/alfanuez-min.jpg"
+  "imagenesventa/alfanuez-min.jpg",
+  0
 );
 const alfajocookies = new Producto(
   "Alfacookies",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   600,
-  "imagenesventa/paraelte.jpg"
+  "imagenesventa/paraelte.jpg",
+  0
 );
 const delicious = new Producto(
   "Delicious",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   300,
-  "imagenesventa/delicious-min.jpg"
+  "imagenesventa/delicious-min.jpg",
+  0
 );
 const mani = new Producto(
   "Cookies de Maní",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   300,
-  "imagenesventa/cookiesmani-min.jpg"
+  "imagenesventa/cookiesmani-min.jpg",
+  0
 );
 const chips = new Producto(
   "Cookies con Chips",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   250,
-  "imagenesventa/cookieschoco-min.jpg"
+  "imagenesventa/cookieschoco-min.jpg",
+  0
 );
 const rellenas = new Producto(
   "Cookies rellenas de limón",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   300,
-  "imagenesventa/havanna-min.jpg"
+  "imagenesventa/havanna-min.jpg",
+  0
 );
  
 const limon = new Producto(
@@ -174,98 +198,112 @@ const limon = new Producto(
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   250,
-  "imagenesventa/limon-min.jpg"
+  "imagenesventa/limon-min.jpg",
+  0
 );
 const anillos = new Producto(
   "Anillos bañados en chocolate",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   300,
-  "imagenesventa/anillos-min.JPG"
+  "imagenesventa/anillos-min.JPG",
+  0
 );
 const anillosblanco = new Producto(
   "Anillos bañados en chocolate blanco",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   300,
-  "imagenesventa/anilloblanco-min.jpg"
+  "imagenesventa/anilloblanco-min.jpg",
+  0
 );
 const aniz = new Producto(
   "Cookies de Aniz",
   "paraelte",
   Math.random().toString(36).substr(2, 9),
   250,
-  "imagenesventa/aniz.jpg"
+  "imagenesventa/aniz.jpg",
+  0
 );
 const pandecampo = new Producto(
   "Pan de Campo",
   "salados",
   Math.random().toString(36).substr(2, 9),
   350,
-  "imagenesventa/pancampo.jpg"
+  "imagenesventa/pancampo.jpg",
+  0
 );
 const pandemolde = new Producto(
   "Pan de Molde",
   "salados",
   Math.random().toString(36).substr(2, 9),
   300,
-  "imagenesventa/pandemolde.jpg"
+  "imagenesventa/pandemolde.jpg",
+  0
 );
 const pandetrigo = new Producto(
   "Pan de Trigo Sarraceno",
   "salados",
   Math.random().toString(36).substr(2, 9),
   300,
-  "imagenesventa/pantrigosarra.jpg"
+  "imagenesventa/pantrigosarra.jpg",
+  0
 );
 const pandequeso = new Producto(
   "Pancitos de Queso",
   "salados",
   Math.random().toString(36).substr(2, 9),
   440,
-  "imagenesventa/panqueso.jpg"
+  "imagenesventa/panqueso.jpg",
+  0
 );
 const pandecebolla = new Producto(
   "Pancitos Saborizados de Cebolla",
   "salados",
   Math.random().toString(36).substr(2, 9),
   300,
-  "imagenesventa/pancebolla.jpg"
+  "imagenesventa/pancebolla.jpg",
+  0
 );
 const pancitotrigo = new Producto(
   "Pancitos de Trigo Sarraceno",
   "salados",
   Math.random().toString(36).substr(2, 9),
   1100,
-  "imagenesventa/pancitostrigo.jpg"
+  "imagenesventa/pancitostrigo.jpg",
+  0
 );
 const panchips = new Producto(
   "Pancitos de Chips",
   "salados",
   Math.random().toString(36).substr(2, 9),
   280,
-  "imagenesventa/chips-min.jpg"
+  "imagenesventa/chips-min.jpg",
+  0
 );
 const pizza = new Producto(
   "Prepizza",
   "salados",
   Math.random().toString(36).substr(2, 9),
   110,
-  "imagenesventa/pizza.jpg"
+  "imagenesventa/pizza.jpg",
+  0
 );
 const bizcochitosgrasa = new Producto(
   "Bizcochitos de grasa",
   "salados",
   Math.random().toString(36).substr(2, 9),
   250,
-  "imagenesventa/bizcochitosgrasa-min.JPG"
+  "imagenesventa/bizcochitosgrasa-min.JPG",
+  0
 );
 const bizcochitoslibritos = new Producto(
   "Bizcochitos de grasa",
   "salados",
   Math.random().toString(36).substr(2, 9),
   300,
-  "imagenesventa/bizcochitoslibritos-min.JPG"
+  "imagenesventa/bizcochitoslibritos-min.JPG",
+  0
 );
 productos = [];
 productos.push(
@@ -383,8 +421,21 @@ function agregarItem(producto) {
   $("#mySidenav").append(` <div class="itemCarrito" id="remover${producto.id}"><h3>${producto.nombre}</h3>
   <img src= ${producto.img} />
   <b> $ ${producto.precio}</b> 
-  <button id="${producto.id}" class="btn-remover" > Remover</button></div>`);
+  <div type="button"><i class="fas fa-plus sumarIcon" id="${producto.id}"></i></div>
+  <div type="button"><i class="fas fa-window-minimize restarIcon" id="${producto.id}"></i></div>
+  <input type="number" value="${producto.cantidad}">
+  <div type="button"><i class="fas fa-trash btn-remover" id="${producto.id}"></i></div>  
+  </div>`);
   $(".btn-remover").click((e)=>removerItem(e))
+  $(".sumarIcon").click((e)=> sumarItem(e))
+  $(".restarIcon").click((e)=> restarItem(e))
+}
+function sumarItem (e) {
+  carrito = JSON.parse(localStorage.getItem("MiCarrito"));
+  let item = carrito.find((item) => item.id == e.target.id);
+  item.cantidad = parseInt(item.cantidad) +1;
+  console.log(carrito)
+  
 }
 function mostrarItems(array) {
   for (const producto of array) {
@@ -393,9 +444,7 @@ function mostrarItems(array) {
   $(".btn-remover").click((e)=>removerItem(e))
 }
 function removerItem(e) {
-  console.log("click")
   carrito = JSON.parse(localStorage.getItem("MiCarrito"));
-  console.log(carrito)
   let indexDelProducto = carrito.findIndex((item) => item.id == e.target.id);
   if (indexDelProducto !== -1) {
     carrito.splice(indexDelProducto, 1);

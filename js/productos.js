@@ -2,8 +2,8 @@ class Producto {
   constructor(nombre, seccion, id, precio, img, cantidad) {
     this.nombre = nombre;
     this.seccion = seccion;
-    this.precio = precio;
     this.id = id;
+    this.precio = precio;
     this.img = img;
     this.cantidad = cantidad;
   }
@@ -346,12 +346,17 @@ productos.push(
   bizcochitoslibritos
 );
 let paginaActual = window.location.pathname;
-
+window.onload = function (){
+  $("#mySidenav").append( `<div class="totalCompra"><h3>TOTAL:</h3>
+  <input id="totalCompra" value=0 type="text">
+  </div>`)
+  
+}
 if (paginaActual.includes("desayunos")) {
   for (const producto of productos) {
     if (producto.seccion === "regalos") {
       $("#padreFlex")
-        .append(`<div class="productosCarrito"> <img src= ${producto.img} />
+        .append(`<div class="productosCarrito" id=${producto.id}> <img src= ${producto.img} />
       <p>  ${producto.nombre}</p>
       <b> $ ${producto.precio}</b> <br>
       <button id="${producto.id}" class="btn">AGREGAR</button> <br></div>
@@ -362,7 +367,7 @@ if (paginaActual.includes("desayunos")) {
   for (const producto of productos) {
     if (producto.seccion === "postres") {
       $("#postresCards")
-        .append(`<div class="productosCarrito"> <img src= ${producto.img} />
+        .append(`<div class="productosCarrito" id=${producto.id}> <img src= ${producto.img} />
       <p>  ${producto.nombre}</p>
       <b> $ ${producto.precio}</b> <br>
       <button id="${producto.id}" class="btn">AGREGAR</button> <br>
@@ -373,7 +378,7 @@ if (paginaActual.includes("desayunos")) {
   for (const producto of productos) {
     if (producto.seccion === "paraelte") {
       $("#paraelteCards")
-        .append(`<div class="productosCarrito"> <img src= ${producto.img} />
+        .append(`<div class="productosCarrito" id=${producto.id}> <img src= ${producto.img} />
       <p>  ${producto.nombre}</p>
       <b> $ ${producto.precio}</b> <br>
       <button id="${producto.id}" class="btn">AGREGAR</button> <br>
@@ -384,7 +389,7 @@ if (paginaActual.includes("desayunos")) {
   for (const producto of productos) {
     if (producto.seccion === "salados") {
       $("#saladosCards")
-        .append(`<div class="productosCarrito"> <img src= ${producto.img} />
+        .append(`<div class="productosCarrito" id=${producto.id}> <img src= ${producto.img} />
       <p>  ${producto.nombre}</p>
       <b> $ ${producto.precio}</b> <br>
       <button id="${producto.id}" class="btn">AGREGAR</button> <br>
@@ -404,6 +409,7 @@ let carrito = [];
 let carritoSeccion = []
 function agregarProducto(e) {
   agregarClick(e);
+  console.log(productos)
   let productoClickeado = productos.find((item) => item.id == e.target.id);
   if (localStorage.getItem("MiCarrito") !== null) {
     carrito = JSON.parse(localStorage.getItem("MiCarrito"))
@@ -413,18 +419,24 @@ function agregarProducto(e) {
   }
   carrito.push(productoClickeado);
   carritoSeccion.push(productoClickeado);
-  agregarItem(productoClickeado);
   localStorage.setItem("MiCarrito", JSON.stringify(carrito));
   localStorage.setItem(productoClickeado.seccion, JSON.stringify(carritoSeccion));
+  agregarItem(productoClickeado);
+  sumarProductoAlTotal(productoClickeado)
+}
+function sumarProductoAlTotal(productoClickeado){
+  let totalActual = $("#totalCompra").val()
+  let totalActualizado = parseInt(totalActual) + parseInt(productoClickeado.precio) 
+  $("#totalCompra").val(totalActualizado);
 }
 function agregarItem(producto) {
   $("#mySidenav").append(` <div class="itemCarrito" id="remover${producto.id}"><h3>${producto.nombre}</h3>
   <img src= ${producto.img} />
-  <b> $ ${producto.precio}</b> 
+  <b>$${producto.precio}</b> 
   <div type="button"><i class="fas fa-plus sumarIcon" id="${producto.id}"></i></div>
+  <input id="contador${producto.id}" value=1 type="text">
   <div type="button"><i class="fas fa-window-minimize restarIcon" id="${producto.id}"></i></div>
-  <input type="number" value="${producto.cantidad}">
-  <div type="button"><i class="fas fa-trash btn-remover" id="${producto.id}"></i></div>  
+  <div type="button"><i class="fas fa-trash btn-remover" id="${producto.id}"></i></div>
   </div>`);
   $(".btn-remover").click((e)=>removerItem(e))
   $(".sumarIcon").click((e)=> sumarItem(e))
@@ -433,9 +445,16 @@ function agregarItem(producto) {
 function sumarItem (e) {
   carrito = JSON.parse(localStorage.getItem("MiCarrito"));
   let item = carrito.find((item) => item.id == e.target.id);
-  item.cantidad = parseInt(item.cantidad) +1;
-  console.log(carrito)
-  
+  let cantidad = parseInt($("#contador"+ item.id).val()) + 1;
+  $("#contador"+item.id).val(cantidad);
+  localStorage.setItem("MiCarrito", JSON.stringify(carrito));
+}
+function restarItem (e) {
+  carrito = JSON.parse(localStorage.getItem("MiCarrito"));
+  let item = carrito.find((item) => item.id == e.target.id);
+  let cantidad = parseInt($("#contador"+ item.id).val()) -1;
+  $("#contador"+item.id).val(cantidad);
+  localStorage.setItem("MiCarrito", JSON.stringify(carrito));
 }
 function mostrarItems(array) {
   for (const producto of array) {
@@ -473,7 +492,7 @@ function openNav() {
           carritoTemporalSeccion.push(item);
         }   
       })
-      if (carritoTemporalSeccion.length >0 && document.getElementById("mySidenav").childElementCount === 1) {
+      if (carritoTemporalSeccion.length >0 && document.getElementById("mySidenav") !== null && document.getElementById("mySidenav").childElementCount === 2) {
         mostrarItems(carritoTemporalSeccion);
       } else {
         mostrarItems(carritoItemsAgregar);
